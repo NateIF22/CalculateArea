@@ -19,8 +19,13 @@ namespace CalculateArea
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
-            if (!Validators.IsMinimumLength(txtWidth.Text, 1)||
-                !Validators.IsMinimumLength(txtHeight.Text, 1))
+            if (Validators.IsMinimumLength(txtWidth.Text, 1)||
+                Validators.IsMinimumLength(txtHeight.Text, 1))
+            {
+                return;
+            }
+            if (Validators.IsInteger(txtWidth.Text) == false||
+                Validators.IsInteger(txtHeight.Text) == false)
             {
                 return;
             }
