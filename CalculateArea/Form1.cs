@@ -19,7 +19,11 @@ namespace CalculateArea
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
-            txtWidth.Text = "314";
+            // calculate the width x the height
+            int total = (int.Parse(txtHeight.Text)) * (int.Parse(txtWidth.Text));
+
+            // change the total lable to match.
+            lblTotal.Text = "Total: " + total.ToString();
         }
     }
 }
