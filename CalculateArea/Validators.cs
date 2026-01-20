@@ -8,12 +8,12 @@ namespace CalculateArea
     {
         public static bool IsMinimumLength(string value, int min)
         {
-            return value.Length <= min;
+            return value.Length >= min;
         }
         
         public static bool IsMaximumLength(string value, int max)
         {
-            return value.Length >= max;
+            return value.Length <= max;
         }
 
         public static bool IsInteger(string value)

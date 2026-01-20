@@ -19,14 +19,16 @@ namespace CalculateArea
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
-            if (Validators.IsMinimumLength(txtWidth.Text, 1)||
-                Validators.IsMinimumLength(txtHeight.Text, 1))
+            if (!Validators.IsMinimumLength(txtWidth.Text, 1)||
+                !Validators.IsMinimumLength(txtHeight.Text, 1))
             {
+                MessageBox.Show("Your values are not long enough.");
                 return;
             }
-            if (Validators.IsInteger(txtWidth.Text) == false||
-                Validators.IsInteger(txtHeight.Text) == false)
+            if (!Validators.IsInteger(txtWidth.Text)||
+                !Validators.IsInteger(txtHeight.Text))
             {
+                MessageBox.Show("Please enter an integer");
                 return;
             }
 
