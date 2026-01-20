@@ -45,13 +45,12 @@ namespace CalculateArea
             //    return;
             //}
 
-            if (ValidateField(txtWidth.Text, "The width property is too short.")
+            if (ValidateField(txtWidth.Text, "The width property is too short."))
             {
                 return;
             }
 
-            if (ValidateField(txtHeight.Text, "The height property is too short.")
-            )
+            if (ValidateField(txtHeight.Text, "The height property is too short."))
             {
                 return;
             }
