@@ -21,13 +21,11 @@ namespace CalculateArea
         {
             if (ValidateField(txtWidth.Text, "The width property is too short."))
             {
-                MessageBox.Show("Your values are not long enough.");
                 return;
             }
 
             if (ValidateField(txtHeight.Text, "The height property is too short."))
             {
-                MessageBox.Show("Please enter an integer");
                 return;
             }
 
