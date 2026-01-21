@@ -16,9 +16,10 @@ namespace CalculateArea
             return value.Length <= max;
         }
 
-        public static bool IsInteger(string value)
+        public static bool ContainsInteger(string value, out int number)
         {
-            return int.TryParse(value, out _);
+            
+            return int.TryParse(value, out number);
         }
     }
 }

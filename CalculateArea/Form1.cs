@@ -24,13 +24,28 @@ namespace CalculateArea
                 return;
             }
 
+            // De Morgan's Law:
+            //!(p && x)  ==> !p || !x
+
             if (ValidateField(txtHeight.Text, "The height property is too short."))
             {
                 return;
             }
 
+            if (!Validators.ContainsInteger(txtWidth.Text, out int width))
+            {
+                MessageBox.Show("Error, width does not contain a number.", "Please try again.");
+                return;   
+            }
+
+            if (!Validators.ContainsInteger(txtHeight.Text, out int height))
+            {
+                MessageBox.Show("Error, height does not contain a number.", "Please try again.");
+                return;
+            }
+
             // calculate the width x the height
-            int total = (int.Parse(txtHeight.Text)) * (int.Parse(txtWidth.Text));
+            int total = (height) * (width);
 
             // change the total lable to match.
             lblTotal.Text = "Total: " + total.ToString();
