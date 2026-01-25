@@ -24,6 +24,12 @@ namespace CalculateArea
                 return;
             }
 
+            if (!Validators.ContainsInteger(txtWidth.Text, out int width))
+            {
+                MessageBox.Show("Width does not contain a number.", "Please try again.");
+                return;
+            }
+
             // De Morgan's Law:
             //!(p && x)  ==> !p || !x
 
@@ -32,15 +38,9 @@ namespace CalculateArea
                 return;
             }
 
-            if (!Validators.ContainsInteger(txtWidth.Text, out int width))
-            {
-                MessageBox.Show("Error, width does not contain a number.", "Please try again.");
-                return;   
-            }
-
             if (!Validators.ContainsInteger(txtHeight.Text, out int height))
             {
-                MessageBox.Show("Error, height does not contain a number.", "Please try again.");
+                MessageBox.Show("Height does not contain a number.", "Please try again.");
                 return;
             }
 
