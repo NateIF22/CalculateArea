@@ -7,16 +7,6 @@ namespace CalculateArea
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCalculate_Click(object sender, EventArgs e)
         {
             if (ValidateField(txtWidth.Text, "The width property is too short."))

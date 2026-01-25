@@ -43,7 +43,6 @@
             txtWidth.Size = new Size(106, 27);
             txtWidth.TabIndex = 0;
             txtWidth.Text = "0";
-            txtWidth.TextChanged += textBox1_TextChanged;
             // 
             // lblWidth
             // 
@@ -53,7 +52,6 @@
             lblWidth.Size = new Size(49, 20);
             lblWidth.TabIndex = 1;
             lblWidth.Text = "Width";
-            lblWidth.Click += label1_Click;
             // 
             // lblHeight
             // 
